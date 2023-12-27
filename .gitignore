@@ -1,0 +1,13 @@
+/.apm/
+/.node-gyp/
+/blob-store/
+/compile-cache/
+/recovery/
+/storage/
+.pulsar-socket-secret-*
+/config.cson
+/github.cson
+/nohup.out
+
+/packages/*
+!/packages/monokai-remagpie/
