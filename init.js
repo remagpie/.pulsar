@@ -1,17 +1,27 @@
-// Your init script
-//
-// Pulsar will evaluate this file each time a new window is opened. It is run
-// after packages are loaded/activated and after the previous editor state
-// has been restored.
-//
-// An example hack to log to the console when each text editor is saved.
-//
-// atom.workspace.observeTextEditors(editor =>
-//   editor.onDidSave(() =>
-//     console.log(`Saved! ${editor.getPath()}`)
-//   )
-// );
-//
-// See the Pulsar Launch manual for more information on this file and how to
-// customize it.
-// https://pulsar-edit.dev/docs/launch-manual/sections/core-hacking/#the-init-file
+"use strict";
+
+// Disable some builtin packages
+atom.packages.disablePackage("about");
+atom.packages.disablePackage("archive-view");
+atom.packages.disablePackage("autocomplete-atom-api");
+atom.packages.disablePackage("autoflow");
+atom.packages.disablePackage("autosave");
+atom.packages.disablePackage("background-tips");
+atom.packages.disablePackage("bookmarks");
+atom.packages.disablePackage("github");
+atom.packages.disablePackage("go-to-line");
+atom.packages.disablePackage("link");
+atom.packages.disablePackage("metrics");
+atom.packages.disablePackage("open-on-github");
+atom.packages.disablePackage("spell-check");
+atom.packages.disablePackage("update-package-dependencies");
+atom.packages.disablePackage("welcome");
+
+atom.config.set("core.autoHideMenuBar", true);
+atom.config.set("core.automaticallyUpdate", false);
+atom.config.set("core.closeEmptyWindows", false);
+atom.config.set("editor.invisibles.eol", " ");
+atom.config.set("editor.scrollPastEnd", true);
+atom.config.set("editor.showIndentGuide", true);
+atom.config.set("editor.showInvisibles", true);
+atom.config.set("editor.tabLength", 4);
