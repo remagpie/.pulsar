@@ -91,14 +91,8 @@ atom.workspace.observeTextEditors((editor) => {
 	const mode = document.documentElement.getAttribute("moderator");
 	editor.enableKeyboardInput(mode === "edit");
 });
-
 moderator.addModeListener((editor, mode) => {
 	editor.enableKeyboardInput(mode === "edit");
-});
-moderator.addModeListener((editor, mode, isActive) => {
-	if (isActive && mode === "navigate") {
-		atom.commands.dispatch(editor.element, "autocomplete-plus:cancel");
-	}
 });
 
 // Set the initial mode to navigate mode

@@ -30,7 +30,7 @@ async function ppm(...args) {
 }
 
 const installing = new Map();
-async function install(name, parents = []) {
+async function install(name, parents = ["User config"]) {
 	// Just enable the package if it's already installed
 	if (atom.packages.getAvailablePackageNames().includes(name)) {
 		atom.packages.enablePackage(name);
@@ -77,7 +77,12 @@ async function install(name, parents = []) {
 
 	// Install the dependencies
 	if (Object.keys(metadata).includes("package-deps")) {
-		metadata["package-deps"].forEach((p) => install(p, [...parents, name]));
+		for (const dependency of metadata["package-deps"]) {
+			await install(
+				typeof dependency === "string" ? dependency : dependency.name,
+				[...parents, name],
+			);
+		}
 	}
 }
 

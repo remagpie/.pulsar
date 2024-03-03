@@ -1,5 +1,8 @@
 "use strict";
 
+const fs = require("fs");
+const path = require("path");
+
 // Disable some builtin packages
 atom.packages.disablePackage("about");
 atom.packages.disablePackage("archive-view");
@@ -27,3 +30,6 @@ atom.config.set("editor.showInvisibles", true);
 atom.config.set("editor.tabLength", 4);
 
 require("./src/moderator");
+for (const file of fs.readdirSync(path.join(__dirname, "src", "packages"))) {
+	require(path.join(__dirname, "src", "packages", file));
+}
