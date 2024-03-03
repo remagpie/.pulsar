@@ -1,0 +1,61 @@
+// No blinking cursor
+[moderator=edit] atom-text-editor.is-focused {
+	.cursor {
+		opacity: 1;
+	}
+}
+
+// Bar cursor in the edit mode
+[moderator=edit] atom-text-editor.is-focused {
+	.cursor {
+		border-left: 2px solid #FFFFFF;
+	}
+}
+[moderator=edit][modifier=gh] atom-text-editor.is-focused {
+	.cursor {
+		border-left: 2px solid #FF00FF;
+	}
+}
+[moderator=edit][modifier=vn] atom-text-editor.is-focused {
+	.cursor {
+		border-left: 2px solid #FFFF00;
+	}
+}
+
+// Block cursor in the navigate mode
+[moderator=navigate] atom-text-editor.is-focused {
+	.cursor {
+		border: none;
+		background-color: #FFFFFF;
+		opacity: 0.4;
+	}
+}
+[moderator=navigate][modifier=gh] atom-text-editor.is-focused {
+	.cursor {
+		background-color: #FF00FF;
+	}
+}
+[moderator=navigate][modifier=vn] atom-text-editor.is-focused {
+	.cursor {
+		background-color: #FFFF00;
+	}
+}
+
+// Hollow block cursor in the navigate mode when not focused
+[moderator=navigate] atom-text-editor:not(.is-focused) {
+	.cursor {
+		border: 1px solid #FFFFFF;
+		background: none;
+		opacity: 0.4;
+	}
+}
+[moderator=navigate][modifier=gh] atom-text-editor:not(.is-focused) {
+	.cursor {
+		border: 1px solid #FF00FF;
+	}
+}
+[moderator=navigate][modifier=vn] atom-text-editor:not(.is-focused) {
+	.cursor {
+		border: 1px solid #FFFF00;
+	}
+}

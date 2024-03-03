@@ -25,3 +25,5 @@ atom.config.set("editor.scrollPastEnd", true);
 atom.config.set("editor.showIndentGuide", true);
 atom.config.set("editor.showInvisibles", true);
 atom.config.set("editor.tabLength", 4);
+
+require("./src/moderator");
