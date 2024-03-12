@@ -9,5 +9,5 @@ ppm.activate("peti-ui", {
 	hideProjectTab: true,
 	fontFamily: "Pretendard Variable",
 });
-// apm.activate("monokai-remagpie");
+ppm.activate("monokai-remagpie");
 ppm.activate("file-icons");
