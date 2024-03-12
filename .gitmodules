@@ -1,0 +1,3 @@
+[submodule "packages/peti-ui"]
+	path = packages/peti-ui
+	url = git@github.com:remagpie/peti-ui.git

@@ -2,12 +2,12 @@
 
 const ppm = require("../ppm");
 
-// atom.config.set("core.themes", ["seti-ui", "monokai-remagpie"]);
+atom.config.set("core.themes", ["peti-ui", "one-dark-syntax"]);
 
-// ppm.activate("seti-ui", {
-// 	compactView: true,
-// 	fileIcons: false,
-// 	hideProjectTab: true,
-// });
+ppm.activate("peti-ui", {
+	compactView: true,
+	hideProjectTab: true,
+	fontFamily: "Pretendard Variable",
+});
 // apm.activate("monokai-remagpie");
 ppm.activate("file-icons");
